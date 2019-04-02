@@ -16,7 +16,7 @@ import com.example.simplerestapis.models.ValueResponse;
 @RestController
 public class WebController {
 
-	@CrossOrigin(origins = "http://localhost:9000")
+	@CrossOrigin(origins = "http://app-javaapi.herokuapp.com/sample")
 	@RequestMapping("/sample")
 	public SampleResponse Sample(@RequestParam(value = "name",
 	defaultValue = "Robot") String name) {
@@ -27,7 +27,7 @@ public class WebController {
 
 	}
 	
-	@CrossOrigin(origins = "http://localhost:9000")
+	@CrossOrigin(origins = "http://app-javaapi.herokuapp.com/test")
 	@RequestMapping(value = "/test", method = RequestMethod.POST)
 	public PostResponse Test(@RequestBody PostRequest inputPayload) {
 		PostResponse response = new PostResponse();
@@ -37,7 +37,7 @@ public class WebController {
 		return response;
 	}
 	
-	@CrossOrigin(origins = "http://localhost:9000")
+	@CrossOrigin(origins = "http://app-javaapi.herokuapp.com/value")
 	@RequestMapping("/value")
     public ValueResponse value() {
         return new ValueResponse();
