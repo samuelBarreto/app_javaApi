@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.GetMapping;
 
 import com.example.simplerestapis.models.PostRequest;
 import com.example.simplerestapis.models.PostResponse;
@@ -15,6 +16,22 @@ import com.example.simplerestapis.models.ValueResponse;
 
 @RestController
 public class WebController {
+
+	 private final AtomicInteger counter = new AtomicInteger();
+
+    @CrossOrigin(origins = "http://localhost:9000")
+    @GetMapping("/value")
+    public ValueResponse value(@RequestParam(required=false) ) {
+        System.out.println("==== in greeting ====");
+        return new ValueResponse(counter.incrementAndGet());
+    }
+
+    @GetMapping("/value-javaconfig")
+    public ValueResponse valueWithJavaconfig(@RequestParam(required=false)) {
+        System.out.println("==== in greeting ====");
+        return new ValueResponse(counter.incrementAndGet());
+    }
+
 
 	@CrossOrigin(origins = "http://app-javaapi.herokuapp.com/sample")
 	@RequestMapping("/sample")
@@ -36,17 +53,5 @@ public class WebController {
 		response.setExtra("Some text");
 		return response;
 	}
-	
-	@CrossOrigin(origins = "http://localhost:9000/")
-	@RequestMapping("/value")
-        public ValueResponse value(@RequestParam(required=false)) {
-        return new ValueResponse();
-    }
-	
-	@RequestMapping("/value-javaconfig")
-        public ValueResponse valueWithJavaconfig(@RequestParam(required=false)) {
-        return new ValueResponse();
-    }
-	
 	
 }
