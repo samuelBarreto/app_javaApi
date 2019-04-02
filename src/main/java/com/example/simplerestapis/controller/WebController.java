@@ -37,9 +37,18 @@ public class WebController {
 		return response;
 	}
 	
-	@CrossOrigin(origins = "http://localhost:3000/")
+	
+	
 	@RequestMapping("/value")
-    public ValueResponse value() {
+        public ValueResponse value() {
         return new ValueResponse();
     }
+	
+	@CrossOrigin(origins = "http://localhost:9000/")
+	@RequestMapping("/value")
+        public ValueResponse value() {
+        return new ValueResponse();
+    }
+	
+	
 }
