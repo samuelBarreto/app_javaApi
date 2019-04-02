@@ -27,7 +27,7 @@ public class WebController {
     @GetMapping("/value-javaconfig")
     public ValueResponse valueWithJavaconfig() {
         System.out.println("==== in greeting ====");
-        return new ValueResponse(counter.incrementAndGet());
+        return new ValueResponse();
     }
 
 
