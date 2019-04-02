@@ -21,9 +21,7 @@ public class SimpleRestApisApplication {
 	        return new WebMvcConfigurer() {
 	            @Override
 	            public void addCorsMappings(CorsRegistry registry) {
-	                registry.addMapping("/value").allowedOrigins("http://localhost:3000");
-	                registry.addMapping("/sample").allowedOrigins("http://app-javaapi.herokuapp.com");
-	                registry.addMapping("/test").allowedOrigins("http://app-javaapi.herokuapp.com");
+	                registry.addMapping("/value").allowedOrigins("http://localhost:9000");
 	            }
 	        };
 	    }
