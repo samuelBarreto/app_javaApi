@@ -39,11 +39,6 @@ public class WebController {
 	
 	
 	
-	@RequestMapping("/value")
-        public ValueResponse value(@RequestParam(required=false)) {
-        return new ValueResponse();
-    }
-	
 	@CrossOrigin(origins = "http://localhost:9000/")
 	@RequestMapping("/value-javaconfig")
         public ValueResponse value(@RequestParam(required=false)) {
