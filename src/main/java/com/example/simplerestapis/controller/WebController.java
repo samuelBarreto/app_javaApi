@@ -16,14 +16,12 @@ import com.example.simplerestapis.models.ValueResponse;
 
 @RestController
 public class WebController {
-
-	 private final AtomicInteger counter = new AtomicInteger();
-
+	
     @CrossOrigin(origins = "http://localhost:9000")
     @GetMapping("/value")
     public ValueResponse value() {
         System.out.println("==== in greeting ====");
-        return new ValueResponse(counter.incrementAndGet());
+        return new ValueResponse();
     }
 
     @GetMapping("/value-javaconfig")
