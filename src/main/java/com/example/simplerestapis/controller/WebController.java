@@ -39,12 +39,12 @@ public class WebController {
 	
 	@CrossOrigin(origins = "http://localhost:9000/")
 	@RequestMapping("/value")
-        public ValueResponse value() {
+        public ValueResponse value(@RequestParam(required=false)) {
         return new ValueResponse();
     }
 	
 	@RequestMapping("/value-javaconfig")
-        public ValueResponse valueWithJavaconfig() {
+        public ValueResponse valueWithJavaconfig(@RequestParam(required=false)) {
         return new ValueResponse();
     }
 	
