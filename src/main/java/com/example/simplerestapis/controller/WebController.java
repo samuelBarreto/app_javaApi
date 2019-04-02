@@ -21,13 +21,13 @@ public class WebController {
 
     @CrossOrigin(origins = "http://localhost:9000")
     @GetMapping("/value")
-    public ValueResponse value(@RequestParam(required=false) ) {
+    public ValueResponse value() {
         System.out.println("==== in greeting ====");
         return new ValueResponse(counter.incrementAndGet());
     }
 
     @GetMapping("/value-javaconfig")
-    public ValueResponse valueWithJavaconfig(@RequestParam(required=false)) {
+    public ValueResponse valueWithJavaconfig() {
         System.out.println("==== in greeting ====");
         return new ValueResponse(counter.incrementAndGet());
     }
