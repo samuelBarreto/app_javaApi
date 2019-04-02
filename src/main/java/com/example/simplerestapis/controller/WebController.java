@@ -37,7 +37,7 @@ public class WebController {
 		return response;
 	}
 	
-	@CrossOrigin(origins = "http://app-javaapi.herokuapp.com/value")
+	@CrossOrigin(origins = "http://localhost:3000/")
 	@RequestMapping("/value")
     public ValueResponse value() {
         return new ValueResponse();
