@@ -43,5 +43,10 @@ public class WebController {
         return new ValueResponse();
     }
 	
+	@RequestMapping("/value-javaconfig")
+        public ValueResponse valueWithJavaconfig() {
+        return new ValueResponse();
+    }
+	
 	
 }
