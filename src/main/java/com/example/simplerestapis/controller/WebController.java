@@ -17,8 +17,10 @@ import com.example.simplerestapis.models.ValueResponse;
 @RestController
 public class WebController {
 	
-    @CrossOrigin(origins = "http://localhost:9000")
-    @GetMapping("/value")
+
+
+    @GetMapping(value = "/value")
+   @CrossOrigin(origins = "https://app-javapi.herokuapp.com/value")
     public ValueResponse value() {
         System.out.println("==== in greeting ====");
         return new ValueResponse();
