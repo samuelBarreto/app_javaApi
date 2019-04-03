@@ -22,6 +22,7 @@ public class SimpleRestApisApplication {
 	            @Override
 	            public void addCorsMappings(CorsRegistry registry) {
 	                registry.addMapping("/value-javaconfig").allowedOrigins("http://localhost:9000");
+			    registry.addMapping("/greeting-javaconfig").allowedOrigins("http://localhost:9000");
 	            }
 	        };
 	    }
