@@ -21,10 +21,10 @@ public class WebController {
 
     @GetMapping(value = "/value")
    @CrossOrigin(origins = "https://app-javapi.herokuapp.com/value")
-public ResponseEntity<Object> getValue() {
+public ValueResponse<Object> getValue() {
    return null;
 }
-    
+	   
 
     @GetMapping("/value-javaconfig")
     public ValueResponse valueWithJavaconfig() {
