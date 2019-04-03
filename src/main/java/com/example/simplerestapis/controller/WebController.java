@@ -19,8 +19,8 @@ import com.example.simplerestapis.models.ValueResponse;
 public class WebController {
 	
 
-    @CrossOrigin(origins = "https://app-javaap.herokuapp.com/value")
-    @GetMapping(value = "/value-javaconfig")
+    @CrossOrigin(origins = "https://app-javaap.herokuapp.com")
+    @GetMapping(value = "/value")
        public ValueResponse value() {
         System.out.println("==== in aqui ====");
         return new ValueResponse();
