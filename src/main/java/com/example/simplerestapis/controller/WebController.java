@@ -14,14 +14,14 @@ import com.example.simplerestapis.models.PostResponse;
 import com.example.simplerestapis.models.SampleResponse;
 import com.example.simplerestapis.models.ValueResponse;
 
+@CrossOrigin(origins = "https://app-javaap.herokuapp.com", maxAge = 3600)
 @RestController
 public class WebController {
 	
 
-
+    @CrossOrigin(origins = "https://app-javaap.herokuapp.com/value")
     @GetMapping(value = "/value-javaconfig")
-   @CrossOrigin(origins = "https://app-javapi.herokuapp.com/value")
-     public ValueResponse value() {
+       public ValueResponse value() {
         System.out.println("==== in aqui ====");
         return new ValueResponse();
     }
