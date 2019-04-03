@@ -22,9 +22,7 @@ public class SimpleRestApisApplication {
 	            @Override
 	            public void addCorsMappings(CorsRegistry registry) {
 	               registry.addMapping("/")
-					.allowedOrigins("https://app-javaap.herokuapp.com")
-					.allowedMethods("PUT","PUTH", "DELETE")
-					.allowCredentials(false).maxAge(3600);
+					.allowedOrigins("https://app-javaap.herokuapp.com");
 
 	            }
 	        };
